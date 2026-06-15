@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <link rel="stylesheet" href="../src/style.css"/>
+    <script src="../src/jquery.js" defer></script>
+    <script src="../scorm/SCORM_API_wrapper.js" defer></script>
+    <script src="../scorm/scorm.js" defer></script>
+
+</head>
+
+<body>
+    
+<div class="parent">
+    <div class="block">
+        <div class="box"></div>
+        <h1 class="main_page_heading">Тест по физике по теме "Электрический ток"</h1>
+        <div class="content"> 
+
+            <div class="content_field">
+                <span id="greeting"></span>
+                <span>Вы открыли модуль по физике на тему "Электрический ток", в рамках этого обучающего материала вы изучите:</span>
+            </div>
+            
+
+            <div class="info_block">               
+                <ul class="info_list info_list--tight">
+
+                    <a href="page1.html" class="page-link content_field">
+                        "Что такое электрический ток?"
+                        <span class="double-arrow">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </span>
+                    </a>
+
+                    <a href="page2.html" class="page-link content_field">
+                        "Сила тока, напряжение, сопротивление"
+                        <span class="double-arrow">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </span>
+                    </a>
+
+                    <a href="page3.html" class="page-link content_field">
+                        "Закон Ома и электрическая цепь"
+                        <span class="double-arrow">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </span>
+                    </a>
+
+                </ul>
+            </div>
+
+            <p class="content_field">Кликните на необходимую тему чтобы перейти к изучению, также если вы уже уверены в своих знаниях, то можете перейти на тест:</p>
+                
+            <a href="page_test.html" class="page-link content_field">
+                Перейти на тест
+                <span class="double-arrow">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </span>
+            </a>
+                
+            <p class="content_field">(Используйте нижнюю панель(стрелочка внизу) чтобы переходить между страницами)</p>
+                
+
+        </div>
+
+        <div class="sidebar">
+
+            <button class="sidebar-btn"><span class="material-symbols-outlined">arrow_circle_up</span></button>
+
+            <div class="sidebar-pages">
+
+                <a href="page_start.html" class="page">
+                    <span class="material-symbols-outlined">article</span>
+                    Start
+                </a>
+                
+                <a href="page1.html" class="page">
+                    <span class="material-symbols-outlined">article</span>
+                    <span> 1 </span>
+                </a>
+
+                <a href="page2.html" class="page">
+                    <span class="material-symbols-outlined">article</span>
+                    2
+                </a>
+
+                <a href="page3.html" class="page">
+                    <span class="material-symbols-outlined">article</span>
+                    3
+                </a>
+
+                <a href="page_test.html" class="page">
+                    <span class="material-symbols-outlined">article</span>
+                    test
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,242 @@
+
+/* Minimal classes */
+
+.indent_class{
+    text-indent: 30px;
+}
+
+.formulas{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+/* MAIN */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background: #230349;
+}
+
+body{
+    color: #f1ebff;
+    font-family: 'Manrope', 'Segoe UI', sans-serif;
+}
+
+.parent {
+    display: flex;
+    min-width: 100%;
+    min-height: 100dvh;
+    align-items: safe center;
+    
+    padding: 50px 400px 50px 400px;
+    overflow: auto;
+    background: linear-gradient(135deg, #480779, #230349);
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    align-self: flex-start;
+
+    padding: 0px 20px 20px 20px;
+    border: 2px solid #4a90c2;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    background-color: rgb(63, 7, 107);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.main_page_heading {
+    text-align: center;
+    font-size: 48px;
+    padding: 20px;
+}
+
+.secondary_page_heading{
+    text-align: center;
+    font-size: 26px;
+    margin: 20px;
+}
+
+.info_list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.info_list--tight{
+    gap: 30px;
+}
+.info_list--questions{
+    flex-direction: row;
+    gap: 15px;
+}
+
+.questions_options{
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 14px;
+
+    background-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+.questions_options:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.content_field{
+    font-size: 18px;
+    line-height: 1.75;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.06);
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.buttons{
+    font-size: 20px;
+    border-radius: 14px;
+    padding: 20px;
+
+    cursor: pointer;
+    border: 2px solid #4a90c2;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.buttons:hover{
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.double-arrow {
+    display: inline-flex;
+}
+
+.page-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-left: 50px;
+    
+    text-decoration: none;
+    color: inherit; 
+}
+
+.page-link:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.page-link .double-arrow{
+    margin-right: auto;
+}
+
+.page-link .double-arrow .material-symbols-outlined{
+    transition: 0.2s ease;
+}
+
+.page-link .double-arrow .material-symbols-outlined:last-child{
+    margin-left: -15px;
+}
+
+.page-link:hover .double-arrow .material-symbols-outlined:first-child{
+    transform: translateX(10px);
+}
+
+.page-link:hover .double-arrow .material-symbols-outlined:last-child{
+    transform: translateX(15px);
+}
+
+.page-link .double-arrow {
+    vertical-align: middle;
+}
+
+
+@media (max-width: 1024px) {
+    .parent {
+        overflow-wrap: break-word;
+        padding: 0px;
+    }
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.sidebar-pages{
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 500px;
+    height: 100px;
+
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    opacity: 0;
+    transition: 0s;
+    visibility: hidden;
+
+    border: 2px solid #4a90c2;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    background-color: rgba(74, 22, 116, 0.8);
+}
+
+.sidebar-pages.active{
+    transition: 0.35s ease;
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar-btn {
+    display: inline;
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    visibility: visible;
+    transition: transform 0.35s ease;
+}
+
+.sidebar-btn.active {
+    transform: translateY(-110px);
+}
+
+.page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+
+    color: white;
+    text-decoration: none;
+}

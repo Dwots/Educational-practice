@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="Simple_Quiz_SCORM12" version="1.0"
+          xmlns="http://www.cnri.reston.va.us/metadata"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+          xmlns:imsmd="http://www.imsglobal.org/xsd/imsmd_rootv1p2"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.imsglobal.org/xsd/imscple_rootv1p1 imscple_rootv1p1.xsd
+                              http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd
+                              http://www.imsglobal.org/xsd/imsmd_rootv1p2 imsmd_rootv1p2.xsd">
+    <metadata>
+        <schema>ADL SCORM</schema>
+        <schemaversion>1.2</schemaversion>
+    </metadata>
+    <organizations default="quiz_org">
+        <organization identifier="quiz_org">
+            <title>Тестирование</title>
+            <item identifier="item_1" identifierref="resource_1">
+                <title>Тест</title>
+            </item>
+        </organization>
+    </organizations>
+    <resources>
+        <resource identifier="resource_1" type="webcontent" adlcp:scormtype="sco" href="pages/page_start.html">
+            <file href="pages/page_start.html"/>
+            <file href="pages/page1.html"/>
+            <file href="pages/page2.html"/>
+            <file href="pages/page3.html"/>
+            <file href="pages/page_test.html"/>
+            <file href="src/style.css"/>
+            <file href="src/jquery.js"/>
+            <file href="src/quiz.js"/>
+            <file href="scorm/SCORM_API_wrapper.js"/>
+            <file href="scorm/scorm.js"/>
+        </resource>
+    </resources>
+</manifest>
